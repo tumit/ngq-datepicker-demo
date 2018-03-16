@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { th_TH, en_GB } from 'ngq-datepicker';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  opts = th_TH;
+
+  toggle() {
+    this.opts = (this.opts === th_TH) ? en_GB : th_TH;
+  }
+
 }
